@@ -1,0 +1,24 @@
+group "com.flosslab.tools"
+version "0.0.0"
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath group: "com.github.jengelman.gradle.plugins", name: "shadow", version: "2.0.1"
+    }
+}
+
+apply plugin: "java"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+}
