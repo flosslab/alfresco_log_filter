@@ -17,9 +17,9 @@ public class AlfrescoLogFilter implements Filter {
 
         if (request instanceof HttpServletRequest) {
             HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-            String url = httpServletRequest.getServletPath();
+            String url = httpServletRequest.getRequestURL().toString();
 
-            if (url.startsWith("/alfresco/service/api/solr")) {
+            if (url.contains("/alfresco/service/api/solr")) {
                 request.setAttribute("doNotLog", "noLog");
             }
         }
